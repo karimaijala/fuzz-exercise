@@ -1,0 +1,16 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+repositories {
+	mavenCentral()
+	flatDir {
+    	dirs 'src/main/resources'
+	}
+}
+
+dependencies {
+	compile "dev.fuzzit.javafuzz:core:1.22"		
+   	compile name: 'jacocoagent'
+	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'   	
+    testCompile "junit:junit:4.12"
+}
