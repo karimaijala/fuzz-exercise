@@ -14,3 +14,13 @@ dependencies {
 	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'   	
     testCompile "junit:junit:4.12"
 }
+
+test {
+	jvmArgs '-javaagent:src/main/resources/jacocoagent.jar'
+	
+    testLogging {
+        showStandardStreams = true
+    }	
+    
+    outputs.upToDateWhen { false }
+}

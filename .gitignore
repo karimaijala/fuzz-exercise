@@ -1,0 +1,7 @@
+.settings/
+.classpath
+.gradle/
+.project
+bin/
+build
+jacoco.exec
